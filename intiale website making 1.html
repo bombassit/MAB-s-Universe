@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAB's Universe</title>
+  <style>
+    /* Global Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #0d0d0d, #f0f0f0);
+      color: #fff;
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #ffcc00; /* Bright light color representing hope */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #333;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #ffcc00;
+      margin: 0 20px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    /* Section Styling */
+    section {
+      display: none;
+      padding: 40px 20px;
+      background-color: #1a1a1a;
+      min-height: 80vh;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffcc00;
+    }
+
+    /* Content Grid Layout */
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .item {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      color: #fff;
+    }
+
+    .item:hover {
+      transform: translateY(-10px);
+      background-color: #ffcc00;
+      color: #000;
+    }
+
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    /* Call to Action Button Styling */
+    .call-to-action {
+      display: inline-block;
+      background-color: #ffcc00;
+      color: #000;
+      padding: 15px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-to-action:hover {
+      background-color: #ffe680;
+    }
+
+    /* Responsive Design: Adjust for Small Screens */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 10px 0;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>MAB's Universe</h1>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#" onclick="showSection('home')">Home</a>
+    <a href="#" onclick="showSection('videos')">Videos</a>
+    <a href="#" onclick="showSection('shorts')">Shorts</a>
+    <a href="#" onclick="showSection('playlists')">Playlists</a>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <h2>Welcome to MAB's Universe!</h2>
+    <p>
+      আমরা আলোচনা করি কীভাবে যুব সমাজ তাদের জীবনকে উন্নতির পথে পরিচালিত করতে পারে। অসম্ভবকে সম্ভব করা এবং 
+      দৈনন্দিন জীবনকে কীভাবে আরও উন্নত করা যায় সেই সম্পর্কে টিপস নিয়ে আমি নিয়মিত ভিডিও তৈরি করি। 
+      তুমি যদি তোমার জীবনকে পরিবর্তন করতে চাও এবং আলোর পথে এগিয়ে যেতে চাও, তবে এই চ্যানেলটি তোমার জন্য।
+    </p>
+    <a href="https://www.youtube.com/@Universeofmab" class="call-to-action">Subscribe Now</a>
+    
+    <!-- Summary of Sections -->
+    <h2>Explore Our Content</h2>
+    <div class="content-grid">
+      <div class="item">
+        <h3>Videos</h3>
+        <p>Watch our videos focused on personal development.</p>
+        <a href="#" onclick="showSection('videos')">Watch Videos</a>
+      </div>
+      <div class="item">
+        <h3>Shorts</h3>
+        <p>Quick tips and motivational shorts.</p>
+        <a href="#" onclick="showSection('shorts')">Watch Shorts</a>
+      </div>
+      <div class="item">
+        <h3>Playlists</h3>
+        <p>Curated playlists on various topics.</p>
+        <a href="#" onclick="showSection('playlists')">Watch Playlists</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos Section -->
+  <section id="videos">
+    <h2>Our Videos</h2>
+    <div class="content-grid">
+      <div class="item">Video 1</div>
+      <div class="item">Video 2</div>
+      <div class="item">Video 3</div>
+      <!-- Add more videos as needed -->
+    </div>
+  </section>
+
+  <!-- Shorts Section -->
+  <section id="shorts">
+    <h2>Our Shorts</h2>
+    <div class="content-grid">
+      <div class="item">Short 1</div>
+      <div class="item">Short 2</div>
+      <div class="item">Short 3</div>
+      <!-- Add more shorts as needed -->
+    </div>
+  </section>
+
+  <!-- Playlists Section -->
+  <section id="playlists">
+    <h2>Our Playlists</h2>
+    <div class="content-grid">
+      <div class="item">Playlist 1</div>
+      <div class="item">Playlist 2</div>
+      <div class="item">Playlist 3</div>
+      <!-- Add more playlists as needed -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 MAB's Universe. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Section Navigation -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+        activeSection.classList.add('active');
+      }
+    }
+
+    // Default display to Home section
+    showSection('home');
+  </script>
+</body>
+</html>
+
